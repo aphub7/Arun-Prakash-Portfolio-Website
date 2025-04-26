@@ -1,0 +1,336 @@
+@import url(https://www.fontshare.com/fonts/switzer);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'switzer';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#navbar {
+  margin: 20px auto;
+  border: 1px solid white; 
+  width: 95%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 60px;
+  padding: .5rem 5rem;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  backdrop-filter: blur(4px);
+  left: 0PX;
+  right: 0px;
+  z-index: 100;
+}
+
+
+.navbar-brand {
+  font-weight: bold;
+  color: #a77b9f !important;
+  font-size: 24px;
+  }
+
+  .nav-link {
+    color:#a77b9f !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent; /* hidden by default */
+    display: inline-block;
+  }
+  
+  .nav-link:hover {
+    color: #ffccff !important;
+    border-bottom: 2px solid ;
+
+  }
+
+  @media (max-width: 992px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+ 
+section{
+   
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+} 
+
+#home {
+    
+    background: url('BG.jpg'); /* or the actual file path */
+    background-size: cover;
+    background-position: top; /* this moves the image to start from the top */
+    background-repeat: no-repeat;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#home h1{
+    font-size: 100px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    font-family:'switzer';
+}
+
+#home h2{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  /* color: white; */
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cv-btn:hover {
+  color: white;
+  transform: scale(1.1);
+  background-color:#a77b9f; /* darker shade on hover */
+}
+
+
+#typed-text::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+/***About***/
+/* Typography & Text Styling */
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color:black;
+    margin-bottom: 1rem;
+    /* border-bottom: 3px solid #0d6efd; */
+    display: inline-block;
+    padding-bottom: 0.4rem;
+  }
+  
+  .about-intro, .about-skill, .about-goal {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight-skill {
+    color: #198754; /* Bootstrap success green */
+    font-weight: 600;
+  }
+  
+  /* Button Style */
+ /* image */
+
+ .featured-image{
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  min-height: 80vh;
+  width: 80%;
+}
+.image{
+  margin: auto 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 55% 45% 55% 45%;
+  overflow: hidden;
+  animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+@keyframes imgFloat {
+  50%{
+      transform: translateY(10px);
+      border-radius: 45% 55% 45% 55%;
+  }
+}
+
+#projects{
+    background: #f0f0f0;
+}
+
+#projects h1{
+    font-weight: 600;
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: #000;
+}
+
+#projects img{
+    width: 404px;
+    height: 316px;
+}
+
+.card{
+    width: 404px;
+    height: 316px;
+    margin: 20px 20px;
+}
+
+#skills {
+    background: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  .skills-box {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem;
+  color:black;
+  font-weight: 700;
+  margin-bottom: 40px;
+  /* border-bottom: 3px solid #0d6efd; */
+  text-align: center; /* Ensure the title is centered */
+  padding-bottom: 10px;
+   
+  }
+  
+  /* Grid Layout */
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+  }
+  
+  /* Individual Skill Card */
+  .skill-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+  }
+  
+  .skill-card:hover {
+    background: #a77b9f;
+    color: white;
+    transform: translateY(-5px);
+  }
+  
+
+/***contact***/
+
+#contact{
+    background: url(BG.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+#contact h1{
+    color: #ffffff;
+}
+
+#contact h5{
+    color: #ffffff;
+}
+
+#contact span {
+    color: #000;
+}
+
+.contact-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 215px;    
+}
+.contact-info>h2{
+    color: #6e6e6e;
+    margin-bottom: 20px;
+}
+.contact-info>p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6e6e6e;
+    margin-block: 5px;
+    
+}
+.contact-info p>i{
+    font-family:'switzer';
+    font-size: 24px;
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i{
+    color: #a77b9f;
+    z-index: 2;
+}
+
+.footer-social-icons{
+    display: flex;
+    gap: 30px;
+    justify-content: center; 
+}
+
+/***Footer***/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    background: #F8F8F8;
+    padding-block: 5px 5px;
+}
+.top-footer p{
+    font-size: 25px;
+    font-weight: 600;
+}
+.middle-footer .footer-menu{
+    display: flex;
+}
+.footer_menu_list{
+    list-style: none;
+}
+.footer_menu_list a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    margin-inline: 20px;
+}
+
+.bottom-footer{
+    font-size: 14px;
+    margin-top: 10px;
+}
